@@ -8,26 +8,43 @@ import MyCircle from "./MyCircle";
 import Circle from "./Circles/Circle";
 import ColorObject from "./color/ColorObject";
 import colorDefaults from "./color/ColorData";
+import CircleGroup from "./Circles/CircleGroup";
 
-// Creating the sketch itself
+// const sketch = (p5: P5) => {
+// 	let circles: CircleGroup;
+// 	let circle: Circle;
+
+// 	p5.setup = () => {
+// 		p5.colorMode(p5.HSL);
+// 		const canvas = p5.createCanvas(200, 200);
+// 		canvas.parent("app");
+	
+// 		circles = new CircleGroup(p5, 1, 1);
+		
+// 	};
+	
+// 	// The sketch draw method
+// 	p5.draw = () => {
+// 		p5.background(50);
+// 		circles.update();
+// 		circles.show();
+
+// 	};
+// };
+
+
+
 const sketch = (p5: P5) => {
-	// DEMO: Prepare an array of MyCircle instances
-	const circles: Circle[] = [];
-	let circle: Circle;
+	let circles: CircleGroup;
 
-	// The sketch setup method 
+	// SETUP
 	p5.setup = () => {
 
-	let colorObj = new ColorObject(p5, colorDefaults)
+		circles = new CircleGroup(p5, 1, 1);
 
-	p5.colorMode(p5.HSL);
-	circle = new Circle(
-		p5, 
-		p5.createVector(100, 100),
-		100,
-		colorObj
-	);
-		const canvas = p5.createCanvas(200, 200);
+		p5.colorMode(p5.HSL);
+
+		const canvas = p5.createCanvas(600, 600);
 		canvas.parent("app");
 	
 		p5.background("white");
@@ -38,12 +55,12 @@ const sketch = (p5: P5) => {
 	// The sketch draw method
 	p5.draw = () => {
 		
-		p5.background("white");
-		circle.show();
+		p5.background(50);
+		circles.update();
+		circles.show();
 
 	};
 };
 
+
 new P5(sketch);
-
-

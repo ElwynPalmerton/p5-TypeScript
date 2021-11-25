@@ -17,7 +17,7 @@ export default class Circle{
     }
 
     update() {
-        // this.c.update();
+        this.c.update();
     }
 
     show() { 

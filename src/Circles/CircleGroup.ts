@@ -1,5 +1,5 @@
-import Circle from "./Circle.js";
-import ColorFactory from "../color/ColorFactory.js";
+import Circle from "./Circle";
+import ColorFactory from "../color/ColorFactory";
 import p5 from "p5";
 
 
