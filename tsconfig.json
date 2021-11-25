@@ -11,5 +11,12 @@
     ],
     "rootDir": "src",
     "moduleResolution": "node"
-  }
+  },
+  "include":[
+    "./**/*"
+  ],
+  "exclude": [
+    "./built/**/*" ,
+    "./dist/**/*" ,
+  ]
 }
