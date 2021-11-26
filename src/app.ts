@@ -3,7 +3,7 @@ import "p5/lib/addons/p5.dom";
 // import "p5/lib/addons/p5.sound";	// Include if needed
 import "./styles.scss";
 
-import CircleGroup from "./Circles/CircleGroup";
+import ColorCircleGroup from "./Circles/ColorCircleGroup";
 
 class Animal {
 	name: string;
@@ -41,7 +41,7 @@ const sketch = (p5: P5) => {
 	// SETUP
 	p5.setup = () => {
 
-		circles = new CircleGroup(p5, 1, 1);
+		circles = new ColorCircleGroup(p5, 1, 1);
 
 		p5.colorMode(p5.HSL);
 
