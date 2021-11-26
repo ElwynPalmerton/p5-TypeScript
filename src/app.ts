@@ -10,29 +10,6 @@ import ColorObject from "./color/ColorObject";
 import colorDefaults from "./color/ColorData";
 import CircleGroup from "./Circles/CircleGroup";
 
-// const sketch = (p5: P5) => {
-// 	let circles: CircleGroup;
-// 	let circle: Circle;
-
-// 	p5.setup = () => {
-// 		p5.colorMode(p5.HSL);
-// 		const canvas = p5.createCanvas(200, 200);
-// 		canvas.parent("app");
-	
-// 		circles = new CircleGroup(p5, 1, 1);
-		
-// 	};
-	
-// 	// The sketch draw method
-// 	p5.draw = () => {
-// 		p5.background(50);
-// 		circles.update();
-// 		circles.show();
-
-// 	};
-// };
-
-
 
 const sketch = (p5: P5) => {
 	let circles: CircleGroup;
