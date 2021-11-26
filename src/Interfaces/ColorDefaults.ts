@@ -1,22 +1,9 @@
+import HslaValue from "./HslaValue";
+
 interface ColorDefaults {
-    color : {
-        h: number,
-        s: number,
-        l: number,
-        a: number
-    },
-    min : {
-        h: number,
-        s: number,
-        l: number,
-        a: number
-    },
-    max : {
-        h: number,
-        s: number,
-        l: number,
-        a: number
-    }
+    color : HslaValue;
+    min : HslaValue;
+    max : HslaValue;
 }
 
 export default ColorDefaults;

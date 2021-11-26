@@ -13,8 +13,12 @@ export default class ColorFactory {
         this.p5 = p5;
     }
 
-    getColor() {
-        const newColor = new ColorObject(this.p5, colorDefaults, 'from color factory');
+    getColor(name: string) {
+        console.log("name: ", name);
+        console.log(colorDefaults);
+        let newColor = new ColorObject(this.p5, colorDefaults, name);
+        console.log("newColor name: ", newColor);
+        console.log("newColor name: ", newColor.colorName);
         return newColor;
     }
 

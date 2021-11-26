@@ -12,7 +12,6 @@ export default class CircleGroup {
     name: string;
     p: p5;
 
-
     constructor(p, x, y){
         this.x = x;
         this.y = y;
@@ -32,11 +31,12 @@ export default class CircleGroup {
             let newRow = [];
             for (let j = 0; j < 5; j++) {
                 let name = i.toString() + j.toString();
+                console.log("name: ", name);
 
-                let colorFromFactory = colorFactory.getColor();
+                let colorFromFactory = colorFactory.getColor(name);
                 let pos = p.createVector(i * 100 + 100, j * 100 + 100);
                 let size = 75;
-                let newCircle = new Circle(this.p, pos, size, colorFromFactory);
+                let newCircle = new Circle(this.p, pos, size, colorFromFactory, name);
                 newRow.push(newCircle);
             }
             this.objects.push(newRow);
@@ -53,7 +53,6 @@ export default class CircleGroup {
     }
 
     show() {
-
         this.objects.forEach(row =>{
             row.forEach(c =>{
                 c.show();

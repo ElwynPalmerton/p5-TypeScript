@@ -3,23 +3,21 @@ import ColorDefaults from '../Interfaces/ColorDefaults';
 import P5 from 'p5';
 
 export default class ColorObject{
-    public color: HslaValue;
+    color: HslaValue;
     rate: number;
     index: number;
     min: HslaValue;
     max: HslaValue;
-    inc: boolean;
     p: P5;
     range: HslaValue;
     colorName: string;
 
-    constructor(p: P5, public c: ColorDefaults, name: string){
-        this.color = c.color;
-        this.rate = p.random(0, 3) * 0.003;
+    constructor(p: P5, c: ColorDefaults, name: string){
+        this.color = Object.assign({}, c.color);
+        this.rate = p.random(0, 3) * 0.03;
         this.index = 0;
         this.min = c.min;
         this.max = c.max;
-        this.inc = true;
         this.range = this.calculateRange();
         this.colorName = name;
         this.p = p;
@@ -35,11 +33,12 @@ export default class ColorObject{
     }
 
     hueRangeUpdate(){
+        // console.log(this.index);
 
-        this.index += this.rate;
-        
+        this.index += this.rate;  
         this.color.h = this.min.h + this.range.h * ((Math.sin(this.index) + 1) / 2);
-        console.log(this.color.h);
+        // this.color.h = this.index;
+        // console.log(this.color.h);
     }
 
     saturationRangeUpdate(){
