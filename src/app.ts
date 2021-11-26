@@ -36,7 +36,7 @@ console.log(dog2.getName());
 
 
 const sketch = (p5: P5) => {
-	let circles: CircleGroup;
+	let circles: ColorCircleGroup;
 
 	// SETUP
 	p5.setup = () => {
