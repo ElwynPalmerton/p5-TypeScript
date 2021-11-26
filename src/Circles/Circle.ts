@@ -30,14 +30,9 @@ export default class Circle{
         p5.ellipse(this.location.x, this.location.y, this.size, this.size);
         p5.fill('black');
         
-        p5.text(this.name + " " 
-        // + this.c.colorName + " " 
-        // + Math.floor(this.c.index) + " "
-        // + this.c.rate
-        + Math.floor(this.c.color.h)
-        // + "cd " + colorDefaults.color.h
+        // p5.text(this.location.x + " " + this.location.y
         
-        , this.location.x - 30, this.location.y);
+        // , this.location.x - 30, this.location.y);
     }
 }
 

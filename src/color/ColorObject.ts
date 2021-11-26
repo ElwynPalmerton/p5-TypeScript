@@ -14,7 +14,7 @@ export default class ColorObject{
 
     constructor(p: P5, c: ColorDefaults, name: string){
         this.color = Object.assign({}, c.color);
-        this.rate = p.random(0, 3) * 0.03;
+        this.rate = p.random(0, 3) * 0.005;
         this.index = 0;
         this.min = c.min;
         this.max = c.max;
